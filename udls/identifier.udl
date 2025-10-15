@@ -1,3 +1,10 @@
-interface Identifier {
+namespace pshenmic_dpp_v2_uniffi {};
+
+enum IdentifierError {
+    "ParsingErrorBase58",
+};
+
+interface Identifiers {
+    [Throws=IdentifierError]
     constructor();
 };
