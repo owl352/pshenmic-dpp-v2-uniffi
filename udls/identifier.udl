@@ -4,7 +4,7 @@ enum IdentifierError {
     "ParsingErrorBase58",
 };
 
-interface Identifiers {
+interface Identifier {
     [Throws=IdentifierError]
     constructor();
 };
