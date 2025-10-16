@@ -1,0 +1,14 @@
+[package]
+name = "enums"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uniffi = { workspace = true, features = [ "cli" ] }
+pshenmic-dpp-v2 = {workspace = true}
+
+[build-dependencies]
+uniffi = { workspace = true, features = [ "build" ] }
+
+[features]
+ffi-trace = ["uniffi/ffi-trace"]
