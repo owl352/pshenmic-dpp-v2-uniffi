@@ -1,0 +1,23 @@
+namespace identifier {};
+
+[Enum]
+interface IdentifierErrorFFI {
+  ParsingErrorBase58(string err);
+  ParsingErrorBytes(string err);
+};
+
+interface IdentifierFFI {
+    [Throws=IdentifierErrorFFI]
+    constructor(DynamicId id);
+
+    string to_hex();
+    string to_base58();
+    string to_base64();
+};
+
+[Enum]
+interface DynamicId {
+    Str(string id);
+    Bytes(bytes id);
+    FfiId(IdentifierFFI id);
+};

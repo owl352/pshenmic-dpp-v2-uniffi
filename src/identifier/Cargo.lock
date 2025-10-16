@@ -994,15 +994,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pshenmic-dpp-v2-uniffi"
-version = "0.1.0"
-dependencies = [
- "identifier",
- "pshenmic-dpp-v2",
- "uniffi",
-]
-
-[[package]]
 name = "quote"
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1439,7 +1430,6 @@ dependencies = [
  "cargo_metadata",
  "clap",
  "uniffi_bindgen",
- "uniffi_build",
  "uniffi_core",
  "uniffi_macros",
  "uniffi_pipeline",
@@ -1468,19 +1458,7 @@ dependencies = [
  "uniffi_internal_macros",
  "uniffi_meta",
  "uniffi_pipeline",
- "uniffi_testing",
  "uniffi_udl",
-]
-
-[[package]]
-name = "uniffi_build"
-version = "0.30.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3e55c05228f4858bb258f651d21d743fcc1fe5a2ec20d3c0f9daefddb105ee4d"
-dependencies = [
- "anyhow",
- "camino",
- "uniffi_bindgen",
 ]
 
 [[package]]
@@ -1548,19 +1526,6 @@ dependencies = [
  "indexmap",
  "tempfile",
  "uniffi_internal_macros",
-]
-
-[[package]]
-name = "uniffi_testing"
-version = "0.30.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a4adb08eb5589849231dc0626ba0f9a1297925fd751f0740fc630ae934dd9c5e"
-dependencies = [
- "anyhow",
- "camino",
- "cargo_metadata",
- "fs-err",
- "once_cell",
 ]
 
 [[package]]

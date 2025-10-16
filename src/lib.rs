@@ -1,3 +1,3 @@
-pub mod identifier;
+pub use identifier;
 
 uniffi::include_scaffolding!("pshenmic-dpp");

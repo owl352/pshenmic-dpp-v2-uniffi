@@ -10,9 +10,16 @@ name = "pshenmic_dpp"
 [dependencies]
 pshenmic-dpp-v2 = {git = "http://github.com/owl352/pshenmic-dpp-v2-base"}
 uniffi = { version = "0.30.0", features = [ "cli" ] }
+identifier = {path = "src/identifier"}
 
 [build-dependencies]
 uniffi = { version = "0.30.0", features = [ "build" ] }
 
 [features]
 ffi-trace = ["uniffi/ffi-trace"]
+
+[workspace]
+resolver = "2"
+members = [
+    "src/identifier"
+]
