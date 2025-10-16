@@ -990,7 +990,6 @@ name = "pshenmic-dpp-v2-uniffi"
 version = "0.1.0"
 dependencies = [
  "pshenmic-dpp-v2",
- "thiserror",
  "uniffi",
 ]
 
