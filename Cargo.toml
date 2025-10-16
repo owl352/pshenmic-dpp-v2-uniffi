@@ -3,23 +3,30 @@ name = "pshenmic-dpp-v2-uniffi"
 version = "0.1.0"
 edition = "2024"
 
+[workspace.dependencies]
+pshenmic-dpp-v2 = {git = "http://github.com/owl352/pshenmic-dpp-v2-base"}
+uniffi = { version = "0.29.0" }
+
 [lib]
 crate-type = ["lib", "cdylib", "staticlib"]
 name = "pshenmic_dpp"
 
 [dependencies]
-pshenmic-dpp-v2 = {git = "http://github.com/owl352/pshenmic-dpp-v2-base"}
-uniffi = { version = "0.29.0", features = [ "cli" ] }
+pshenmic-dpp-v2 = { workspace = true }
+uniffi = { workspace = true, features = [ "cli" ] }
 identifier = {path = "src/identifier"}
+identity = {path = "src/identity"}
+enums = {path = "src/enums"}
+errors = {path = "src/errors"}
 
 [build-dependencies]
-uniffi = { version = "0.29.0", features = [ "build" ] }
+uniffi = { workspace = true, features = [ "build" ] }
 
 [features]
 ffi-trace = ["uniffi/ffi-trace"]
 
 [workspace]
 resolver = "2"
-members = [
+members = [ "src/enums", "src/errors",
     "src/identifier"
-]
+, "src/identity"]

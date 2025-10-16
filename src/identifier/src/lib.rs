@@ -25,6 +25,18 @@ pub enum DynamicId {
 #[derive(Clone, Debug)]
 pub struct IdentifierFFI(IdentifierBind);
 
+impl From<IdentifierBind> for IdentifierFFI {
+    fn from(bind: IdentifierBind) -> Self {
+        Self(bind)
+    }
+}
+
+impl From<IdentifierFFI> for IdentifierBind {
+    fn from(id: IdentifierFFI) -> Self {
+        id.0
+    }
+}
+
 impl IdentifierFFI {
     pub fn new(id: DynamicId) -> Result<Self, IdentifierErrorFFI> {
         match id {

@@ -517,6 +517,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
 
 [[package]]
+name = "enums"
+version = "0.1.0"
+dependencies = [
+ "pshenmic-dpp-v2",
+ "uniffi",
+]
+
+[[package]]
 name = "env_filter"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -553,6 +561,13 @@ checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
  "windows-sys 0.61.2",
+]
+
+[[package]]
+name = "errors"
+version = "0.1.0"
+dependencies = [
+ "uniffi",
 ]
 
 [[package]]
@@ -699,6 +714,17 @@ dependencies = [
 name = "identifier"
 version = "0.1.0"
 dependencies = [
+ "pshenmic-dpp-v2",
+ "uniffi",
+]
+
+[[package]]
+name = "identity"
+version = "0.1.0"
+dependencies = [
+ "enums",
+ "errors",
+ "identifier",
  "pshenmic-dpp-v2",
  "uniffi",
 ]
@@ -988,7 +1014,7 @@ dependencies = [
 [[package]]
 name = "pshenmic-dpp-v2"
 version = "0.1.0"
-source = "git+http://github.com/owl352/pshenmic-dpp-v2-base#6df2df92ed5d2c0a75fbed6673f8a5aecd64a792"
+source = "git+http://github.com/owl352/pshenmic-dpp-v2-base#6635b666dd59fc01d99069b9cffddb0af2fd01b4"
 dependencies = [
  "dpp",
 ]
@@ -997,7 +1023,10 @@ dependencies = [
 name = "pshenmic-dpp-v2-uniffi"
 version = "0.1.0"
 dependencies = [
+ "enums",
+ "errors",
  "identifier",
+ "identity",
  "pshenmic-dpp-v2",
  "uniffi",
 ]

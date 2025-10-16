@@ -1,0 +1,22 @@
+namespace identity {};
+
+[External="errors"]
+typedef enum LockError;
+
+[External="errors"]
+typedef enum IdentityError;
+
+[External="identifier"]
+typedef interface IdentifierFFI;
+
+[External="enums"]
+typedef enum PlatformVersionFFI;
+
+interface IdentityFFI {
+    [Throws=IdentityError]
+    constructor(IdentifierFFI id, PlatformVersionFFI? platform_version);
+
+    [Throws=LockError]
+    void set_balance(u64 balance);
+    u64 get_balance();
+};

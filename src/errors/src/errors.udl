@@ -1,0 +1,9 @@
+namespace errors {};
+
+enum IdentityError {
+    "FailedCreateIdentity"
+};
+
+enum LockError {
+    "FailedToLock"
+};

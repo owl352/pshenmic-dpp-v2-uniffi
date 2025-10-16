@@ -4,11 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-uniffi = { version = "0.29.0", features = [ "cli" ] }
-pshenmic-dpp-v2 = {git = "http://github.com/owl352/pshenmic-dpp-v2-base"}
+uniffi = { workspace = true, features = [ "cli" ] }
+pshenmic-dpp-v2 = {workspace = true}
 
 [build-dependencies]
-uniffi = { version = "0.29.0", features = [ "build" ] }
+uniffi = { workspace = true, features = [ "build" ] }
 
 [features]
 ffi-trace = ["uniffi/ffi-trace"]
